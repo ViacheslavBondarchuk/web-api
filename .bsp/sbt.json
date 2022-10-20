@@ -1,0 +1,18 @@
+{
+  "name": "sbt",
+  "version": "1.7.2",
+  "bspVersion": "2.0.0-M5",
+  "languages": [
+    "scala"
+  ],
+  "argv": [
+    "C:\\cygwin64\\home\\viach\\.sdkman\\candidates\\java\\17.0.4-oracle/bin/java",
+    "-Xms100m",
+    "-Xmx100m",
+    "-classpath",
+    "C:/Users/viach/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14.plugins/Scala/launcher/sbt-launch.jar",
+    "xsbt.boot.Boot",
+    "-bsp",
+    "--sbt-launch-jar=C:/Users/viach/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14.plugins/Scala/launcher/sbt-launch.jar"
+  ]
+}

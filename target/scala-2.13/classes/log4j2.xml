@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <property name="logs_path" value="${env:LOGS_PATH:-logs}"/>
+        <property name="dateformat" value="yyyy-MM-dd HH:mm:ss.SSS Z"/>
+        <property name="rolling_file_size" value="50MB"/>
+        <property name="timezone" value="UTC"/>
+    </Properties>
+
+    <Appenders>
+        <!--Console Appender-->
+        <Console name="console_appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[timeStamp=%d{${dateformat}}{${timezone}}] [logLevel=%highlight{%level}] [thread=%magenta{%thread}] %cyan{%logger{15}} %cyan{eventType=%logger{5}} - className=%C{0}, methodName=%M, message=%msg%n</pattern>
+            </PatternLayout>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <root level="INFO">
+            <appender-ref ref="console_appender"/>
+        </root>
+    </Loggers>
+</Configuration>
